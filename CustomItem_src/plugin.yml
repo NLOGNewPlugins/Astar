@@ -1,0 +1,5 @@
+name: CustomItem
+version: "1.0"
+api: 3.0.0-ALPHA11
+author: nlog
+main: nlog\CustomItem\Loader
