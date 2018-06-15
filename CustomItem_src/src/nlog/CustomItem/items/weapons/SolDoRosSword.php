@@ -14,12 +14,12 @@ use nlog\CustomItem\Loader;
 
 
 /**
- * 창성의 구원자-검
+ * 솔도로스의 선택
  */
-class ChangSung extends CustomWeapon {
+class SolDoRosSword extends CustomWeapon {
 
     public function getWeaponName(): int {
-        return "창성의 구원자-검";
+        return "솔도로스의 선택";
     }
 
     public function getGrade(): int {
@@ -31,7 +31,7 @@ class ChangSung extends CustomWeapon {
     }
 
     public function getAdditionalDamage(): int {
-        return 40;
+        return 0;
     }
 
     public function getPower(): int {
@@ -39,7 +39,7 @@ class ChangSung extends CustomWeapon {
     }
 
     public function getExtraDamage(): int {
-        return 0;
+        return 20;
     }
 
     public function getMaxDurability(): int {

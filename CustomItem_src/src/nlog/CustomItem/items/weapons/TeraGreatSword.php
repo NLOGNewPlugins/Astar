@@ -14,28 +14,28 @@ use nlog\CustomItem\Loader;
 
 
 /**
- * 창성의 구원자-검
+ * 테라:리컨스트럭션 그레이트 소드
  */
-class ChangSung extends CustomWeapon {
+class TeraGreatSword extends CustomWeapon {
 
     public function getWeaponName(): int {
-        return "창성의 구원자-검";
+        return "테라:리컨스트럭션 그레이트 소드";
     }
 
     public function getGrade(): int {
-        return ItemGrade::GRADE_EPIC;
+        return ItemGrade::GRADE_LEGENDARY;
     }
 
     public function getDefaultDamage(): int {
-        return 8;
+        return 7;
     }
 
     public function getAdditionalDamage(): int {
-        return 40;
+        return 0;
     }
 
     public function getPower(): int {
-        return 75;
+        return 72;
     }
 
     public function getExtraDamage(): int {
@@ -44,5 +44,9 @@ class ChangSung extends CustomWeapon {
 
     public function getMaxDurability(): int {
         return Loader::WEAPON_Durability;
+    }
+
+    public function getCriticalPercent(): int {
+        return 12;
     }
 }

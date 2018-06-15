@@ -15,13 +15,15 @@ use pocketmine\Player;
 
 abstract class CustomWeapon extends Tool {
 
-    public const GRADE_RARE = 0;
-    public const GRADE_UNIQUE = 1;
-    public const GRADE_LEGENDARY = 2;
-    public const GRADE_EPIC = 3;
+    public function __construct(int $id, int $meta = 0) {
+        parent::__construct($id, $meta, $this->getCustomName());
+    }
 
     /** 등급 */
     abstract public function getGrade(): int;
+
+    /** 등급 */
+    abstract public function getWeaponName(): int;
 
     /** 데미지 */
     abstract public function getDefaultDamage(): int;
@@ -33,10 +35,36 @@ abstract class CustomWeapon extends Tool {
     abstract public function getExtraDamage(): int;
 
     /** 힘 */
-    abstract public function getPower(): int;
+    public function getPower(): int {
+        switch ($this->getGrade()) {
+            case ItemGrade::GRADE_RARE:
+                return 63;
+            case ItemGrade::GRADE_UNIQUE:
+                return 67;
+            case ItemGrade::GRADE_LEGENDARY:
+                return 72;
+            case ItemGrade::GRADE_EPIC:
+                return 75;
+            default:
+                return 0;
+        }
+    }
+
+    /** 크리티컬 발동 확률  */
+    public function getCriticalPercent(): int {
+        return 0;
+    }
+
+    public function getCustomName(): string {
+        return ItemGrade::getPrefixByGrade($this->getGrade()) . $this->getWeaponName();
+    }
 
     public final function applyDamage(int $amount): bool {
         return true;
+    }
+
+    public final function isCritical(): bool {
+        return mt_rand(1, 100) <= CustomItemUtils::getSumMath($this->getCriticalPercent(), 3);
     }
 
 }

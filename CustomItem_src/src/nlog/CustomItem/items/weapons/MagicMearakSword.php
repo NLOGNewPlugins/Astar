@@ -14,28 +14,28 @@ use nlog\CustomItem\Loader;
 
 
 /**
- * 창성의 구원자-검
+ * 마법의 메라크
  */
-class ChangSung extends CustomWeapon {
+class MagicMearakSword extends CustomWeapon {
 
     public function getWeaponName(): int {
-        return "창성의 구원자-검";
+        return "마법의 메라크";
     }
 
     public function getGrade(): int {
-        return ItemGrade::GRADE_EPIC;
+        return ItemGrade::GRADE_RARE;
     }
 
     public function getDefaultDamage(): int {
-        return 8;
+        return 5;
     }
 
     public function getAdditionalDamage(): int {
-        return 40;
+        return 0;
     }
 
     public function getPower(): int {
-        return 75;
+        return 63;
     }
 
     public function getExtraDamage(): int {
@@ -44,5 +44,9 @@ class ChangSung extends CustomWeapon {
 
     public function getMaxDurability(): int {
         return Loader::WEAPON_Durability;
+    }
+
+    public function getCriticalPercent(): int {
+        return 0;
     }
 }

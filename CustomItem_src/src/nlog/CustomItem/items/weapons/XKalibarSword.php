@@ -14,12 +14,12 @@ use nlog\CustomItem\Loader;
 
 
 /**
- * 창성의 구원자-검
+ * 성검:엑스칼리버
  */
-class ChangSung extends CustomWeapon {
+class XKalibarSword extends CustomWeapon {
 
     public function getWeaponName(): int {
-        return "창성의 구원자-검";
+        return "성검:엑스칼리버";
     }
 
     public function getGrade(): int {
@@ -31,7 +31,7 @@ class ChangSung extends CustomWeapon {
     }
 
     public function getAdditionalDamage(): int {
-        return 40;
+        return 18;
     }
 
     public function getPower(): int {

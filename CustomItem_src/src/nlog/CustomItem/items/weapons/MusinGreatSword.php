@@ -14,12 +14,12 @@ use nlog\CustomItem\Loader;
 
 
 /**
- * 창성의 구원자-검
+ * 진:무신의 기운이 담긴 그레이트 소드
  */
-class ChangSung extends CustomWeapon {
+class MusinGreatSword extends CustomWeapon {
 
     public function getWeaponName(): int {
-        return "창성의 구원자-검";
+        return "진:무신의 기운이 담긴 그레이트 소드";
     }
 
     public function getGrade(): int {
@@ -31,7 +31,7 @@ class ChangSung extends CustomWeapon {
     }
 
     public function getAdditionalDamage(): int {
-        return 40;
+        return 0;
     }
 
     public function getPower(): int {
@@ -39,7 +39,7 @@ class ChangSung extends CustomWeapon {
     }
 
     public function getExtraDamage(): int {
-        return 0;
+        return 18;
     }
 
     public function getMaxDurability(): int {
